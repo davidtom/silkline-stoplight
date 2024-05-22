@@ -3,11 +3,15 @@ import { Color } from "../types";
 interface LightProps {
   color: Color;
   activeColors: Color[];
+  backgroundColor: string;
 }
 
-export const Light = ({ color, activeColors }: LightProps) => {
+export const Light = ({ color, activeColors, backgroundColor }: LightProps) => {
   const active = activeColors.includes(color);
   return (
-    <div className={`circle ${color}`} style={{ opacity: active ? 1 : 0.3 }} />
+    <div
+      className={color !== "leftTurn" ? "circle" : "arrow"}
+      style={{ backgroundColor, opacity: active ? 1 : 0.3 }}
+    />
   );
 };

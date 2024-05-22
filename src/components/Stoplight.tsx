@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
-import { Color, Sequence } from "../types";
+import { Color, Configuration, LightProperties, Sequence } from "../types";
 import { Light } from "./Light";
 
 interface StoplightProps {
+  configuration: Configuration;
   sequence: Sequence;
 }
 
-export const Stoplight = ({ sequence }: StoplightProps) => {
+export const Stoplight = ({ configuration, sequence }: StoplightProps) => {
   const [index, setIndex] = useState(0);
   const [activeColors, setActiveColors] = useState<Color[]>([]);
 
@@ -35,9 +36,17 @@ export const Stoplight = ({ sequence }: StoplightProps) => {
 
   return (
     <div className="stoplight">
-      <Light color={"red"} activeColors={activeColors} />
-      <Light color={"yellow"} activeColors={activeColors} />
-      <Light color={"green"} activeColors={activeColors} />
+      {Object.keys(configuration).map((c) => {
+        const color = c as Color;
+        const config = configuration[color] as LightProperties;
+        return (
+          <Light
+            color={color}
+            activeColors={activeColors}
+            backgroundColor={config.color}
+          />
+        );
+      })}
     </div>
   );
 };

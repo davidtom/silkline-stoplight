@@ -1,4 +1,11 @@
-export type Color = "red" | "yellow" | "green";
+export type Color =
+  | "red"
+  | "yellow"
+  | "green"
+  | "leftTurn"
+  | "off"
+  | "orange"
+  | "purple";
 
 export type ActiveColor = {
   colors: Color[];
@@ -6,3 +13,10 @@ export type ActiveColor = {
 };
 
 export type Sequence = ActiveColor[];
+
+export type LightProperties = {
+  position: number;
+  color: string;
+};
+
+export type Configuration = Partial<Record<Color, LightProperties>>;
