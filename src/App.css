@@ -27,6 +27,7 @@ body {
 }
 
 /* AI - didnt want to spend time creating this on my own. Also ran out of time... */
+/* TODO: need to actually make this an arrow...right now I punted and made it a square */
 .arrow {
   width: 60px;
   height: 60px;

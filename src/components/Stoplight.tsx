@@ -36,6 +36,7 @@ export const Stoplight = ({ configuration, sequence }: StoplightProps) => {
 
   return (
     <div className="stoplight">
+      {/* TODO: need to check and respect configuration.position! */}
       {Object.keys(configuration).map((c) => {
         const color = c as Color;
         const config = configuration[color] as LightProperties;

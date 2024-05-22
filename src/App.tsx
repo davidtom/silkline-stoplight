@@ -4,20 +4,21 @@ import "./App.css";
 import { Configuration, Sequence } from "./types";
 import { Stoplight } from "./components/Stoplight";
 
+// TODO: set up a drop down to change these from the app
 /**********
  * DEFAULT
  **********/
-// const CONFIGURATION: Configuration = {
-//   red: { position: 1, color: "red" },
-//   yellow: { position: 2, color: "yellow" },
-//   green: { position: 3, color: "green" },
-// };
+const CONFIGURATION: Configuration = {
+  red: { position: 1, color: "red" },
+  yellow: { position: 2, color: "yellow" },
+  green: { position: 3, color: "green" },
+};
 
-// const SEQUENCE: Sequence = [
-//   { colors: ["green"], duration: 5000 },
-//   { colors: ["yellow"], duration: 1000 },
-//   { colors: ["red"], duration: 2000 },
-// ];
+const SEQUENCE: Sequence = [
+  { colors: ["green"], duration: 5000 },
+  { colors: ["yellow"], duration: 1000 },
+  { colors: ["red"], duration: 2000 },
+];
 
 /**********
  * STANDARD
@@ -49,18 +50,18 @@ import { Stoplight } from "./components/Stoplight";
 /**********
  * PROTECTED TURN
  **********/
-const CONFIGURATION: Configuration = {
-  red: { position: 1, color: "red" },
-  yellow: { position: 2, color: "yellow" },
-  green: { position: 3, color: "green" },
-  leftTurn: { position: 4, color: "#20F7B2" },
-};
-const SEQUENCE: Sequence = [
-  { colors: ["leftTurn"], duration: 1000 },
-  { colors: ["green"], duration: 1000 },
-  { colors: ["yellow"], duration: 1000 },
-  { colors: ["red"], duration: 1000 },
-];
+// const CONFIGURATION: Configuration = {
+//   red: { position: 1, color: "red" },
+//   yellow: { position: 2, color: "yellow" },
+//   green: { position: 3, color: "green" },
+//   leftTurn: { position: 4, color: "#20F7B2" },
+// };
+// const SEQUENCE: Sequence = [
+//   { colors: ["leftTurn"], duration: 1000 },
+//   { colors: ["green"], duration: 1000 },
+//   { colors: ["yellow"], duration: 1000 },
+//   { colors: ["red"], duration: 1000 },
+// ];
 
 /**********
  * PARTY TIME
